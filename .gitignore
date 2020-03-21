@@ -1,0 +1,18 @@
+# build outputs
+bin/
+build/
+target/
+*.class
+*.war
+*.jar*
+*old*
+
+# eclipse workspace (if ever included)
+.metadata/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
