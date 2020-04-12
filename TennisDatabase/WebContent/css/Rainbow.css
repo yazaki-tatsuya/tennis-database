@@ -1,0 +1,13 @@
+ @CHARSET "UTF-8";
+  .indent_1 {
+	padding-left:1.5em;
+  }
+  .indent_text {
+	text-align:left
+  }
+  .font_1 {
+	font-family: "Cambria";	
+  }
+  .indent_form {
+  	margin-left:10px;
+  }
