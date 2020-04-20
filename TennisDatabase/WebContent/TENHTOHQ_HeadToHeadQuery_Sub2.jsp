@@ -13,36 +13,47 @@
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="30%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="30%"/>
 	<script type='text/javascript' language='javascript'>	
-		//【親子連動】子画面のテキストボックス(q_player03)の値を親画面のテキストボックス(q_player01)に渡すJavaScriptの関数
+		//【親子連動テスト】子画面のテキストボックス(q_player03)の値を親画面のテキストボックス(q_player01)に渡すJavaScriptの関数
+		//実験的に作ったので基本は使いません・・
+		/*
 		function onCallSub(){
 			console.log("aaaaa");
 			window.opener.document.getElementById("q_player02").value = document.getElementById("q_player03").value;
 		}
+		*/
 		function onButtonUpdateOrigValue(){
-
-			choose_player2 = document.tennis_subquery.choose_player;
-			
+			choose_player = document.tennis_subquery.choose_player;
 			//----Debug Code Start----//
 			var toString = Object.prototype.toString;
-			console.log("output type: "+toString.call(choose_player2));
-			console.log("choose_player: "+choose_player2);
-			console.log("length: "+choose_player2.length);
+			console.log("output type: "+toString.call(choose_player));
+			console.log("choose_player: "+choose_player);
+			console.log("length: "+choose_player.length);
 			//----Debug Code End----//
-
-			if(toString.call(choose_player2)=="[object HTMLInputElement]"){
+			//(1)When the search result is only 1 record, the object type will be HTMLInputElement. Since it is not a list, cannot loop using "for" so just get the value.
+			if(toString.call(choose_player)=="[object HTMLInputElement]"){
 				console.log("object is HTMLInputElement");
-				if(choose_player2.checked){
-					window.opener.document.getElementById("q_player02").value = choose_player2.value;	
+				if(choose_player.checked){
+					if(document.tennis_subquery.hbutton_no.value=="1"){
+						window.opener.document.getElementById("q_player01").value = choose_player.value;	
+					}else if(document.tennis_subquery.hbutton_no.value=="2"){
+						window.opener.document.getElementById("q_player02").value = choose_player.value;	
+					}
 				}
-			}else{
-				for(i=0; i<choose_player2.length; i++){
-					console.log("player value "+i+" : "+choose_player2[i].value);
-					if(choose_player2[i].checked){
-						window.opener.document.getElementById("q_player02").value = choose_player2[i].value;		
+			}
+			//(2)When the search result is multiple records, the object type will be RadioNodeList, so loop using the "length" property.
+			else{
+				for(i=0; i<choose_player.length; i++){
+					console.log("player value "+i+" : "+choose_player[i].value);
+					if(choose_player[i].checked){
+						if(document.tennis_subquery.hbutton_no.value=="1"){
+							window.opener.document.getElementById("q_player01").value = choose_player.value;	
+						}else if(document.tennis_subquery.hbutton_no.value=="2"){
+							window.opener.document.getElementById("q_player02").value = choose_player.value;	
+						}	
 					}
 				}				
 			}
-			//window.close();
+			window.close();
 		}
 	</script>
 </head>
@@ -53,10 +64,15 @@
 	<th>Player Name</th>
 </tr>
 <%
-//ユーザが画面の項目「Player1」か「Player2」に入力した値を取得
-String param2 = request.getParameter("q_param2");
-param2 = param2.toLowerCase();
-String select_qs = "SELECT (FIRST_NAME || ' ' || LAST_NAME) AS PNAME,PLAYER_SLUG FROM PLAYER_OVERVIEWS WHERE LOWER(FIRST_NAME || ' ' || LAST_NAME) LIKE '%"+param2+"%' ORDER BY PLAYER_SLUG";
+//URLパラメータ「button」から、押されたボタンの番号を取得して隠し項目「button_no」に入れる
+String button = request.getParameter("q_button");
+%>
+<input id="hbutton_no" type="hidden" name="button_no" value="<%=button%>">
+<%
+//URLパラメータ「q_param」から、ユーザが画面の項目「Player1」か「Player2」に入力した値を取得
+String param = request.getParameter("q_param");
+param = param.toLowerCase();
+String select_qs = "SELECT (FIRST_NAME || ' ' || LAST_NAME) AS PNAME,PLAYER_SLUG FROM PLAYER_OVERVIEWS WHERE LOWER(FIRST_NAME || ' ' || LAST_NAME) LIKE '%"+param+"%' ORDER BY PLAYER_SLUG";
 DbConnectUtil3 db = new DbConnectUtil3();
 db.conn = db.DbConnect();
 db.stmt = db.DbStatement();
@@ -75,7 +91,7 @@ while(db.rs.next()){
 }
 %>
 </table>
-<input type="button" value="update" onClick= "onCallSub();"/>
+<%--【親子連動テスト】--%><%--<input type="button" value="update" onClick= "onCallSub();"/>--%>
 <input type="button" value="確定(Finalize)" onClick= "onButtonUpdateOrigValue();"/>
 </form>
 <%db.DbClose();%>
