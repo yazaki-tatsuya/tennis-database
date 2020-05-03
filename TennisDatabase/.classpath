@@ -15,5 +15,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtilComponents"/>
 	<classpathentry kind="lib" path="/home/admin/eclipse-workspace/TennisDatabase/WebContent/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="/home/admin/eclipse-workspace/TennisDatabase/WebContent/WEB-INF/lib/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="/home/admin/eclipse-workspace/TennisDatabase/WebContent/WEB-INF/lib/jfreechart-1.0.19.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
