@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* width = XXXpx : Android(Arrows F-01K)のピクセル数 */
+@media screen and (min-width:0px) {
+	body {
+		color: #5bc0de;
+		width: 98%;
+ 	}
+}
+/* width = 375px : iPhoneの画面ピクセル数 */
+@media screen and (min-width:374px) {
+	body {
+		color: #d9534f;
+		width: 98%;
+ 	}
+}
+/* width = 1270px?? : 富士通のLIFEBOOK(型名FMVWB1U277)のピクセル数 */
+@media screen and (min-width:1275px) {
+	body {
+		color: #a020f0;
+		width: 98%;
+ 	}
+}
+
+/* iPhone8で非常に横長のグラフのスクロールが加速できなかったため、スクロール加速目的で追加 */
+.scroll-touch {
+	-webkit-overflow-scrolling: touch;
+}
