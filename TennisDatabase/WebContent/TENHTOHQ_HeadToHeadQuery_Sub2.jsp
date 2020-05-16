@@ -7,11 +7,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" charset="UTF-8" />
-<link rel="stylesheet" type="text/css" href="css/Rainbow.css" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
 <title>Head To Head</title>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="30%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="30%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="30%"/>
+	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
+	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
+	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<script type='text/javascript' language='javascript'>	
 		//【親子連動テスト】子画面のテキストボックス(q_player03)の値を親画面のテキストボックス(q_player01)に渡すJavaScriptの関数
 		//実験的に作ったので基本は使いません・・
