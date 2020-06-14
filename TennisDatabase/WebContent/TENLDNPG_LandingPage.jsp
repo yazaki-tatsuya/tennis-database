@@ -50,7 +50,7 @@
 		<td>この画面ではユーザーが指定した２選手の対戦成績を見ることができます。</td>
 	</tr>
 	<tr>
-		<td><a href="TENRANCH_RankingChangeQuery.jsp">TENRANCH</a></td>
+		<td><a href="TENRACHQ_RankingChangeQuery.jsp">TENRACHQ</a></td>
 		<td>Ranking Change View Screen</td>
 		<td>Ranking<br />(ランキング)</td>
 		<td>In this screen, we can give the name of player and check the ranking change through his carreer.</td>
