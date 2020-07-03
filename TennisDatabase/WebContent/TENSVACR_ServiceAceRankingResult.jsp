@@ -8,18 +8,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
-<title>Insert title here</title>
+<title>Ace Ranking</title>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<center>
-		<h2 id="title">TENSURCN</h2>
-		<h4 id="subtitle">Court Surface Type Count Screen</h4>
+		<h2 id="title">TENSVACR</h2>
+		<h4 id="subtitle">Service Ace Ranking Result Screen</h4>
 		
 		<%
 		AccessCounter3 ac = new AccessCounter3();
 		%>
-		[ アクセスカウンター： <b>準備中</b> ]	
+		[ アクセスカウンター： <b><%=ac.GetAccessCount2("TENSVACR")%></b> ]	
 		<br />
 	</center>
 	<br />

@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
-<title>Insert title here</title>
+<title>Surface Count</title>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
@@ -19,7 +19,7 @@
 		<%
 		AccessCounter3 ac = new AccessCounter3();
 		%>
-		[ アクセスカウンター： <b>準備中</b> ]	
+		[ アクセスカウンター： <b><%=ac.GetAccessCount2("TENSURCN")%></b> ]	
 		<br />
 	</center>
 	<br />
