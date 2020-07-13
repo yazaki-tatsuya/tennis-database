@@ -6,17 +6,17 @@
 <meta http-equiv="Content-Type" charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
-<title>Head To Head</title>
+<title>Ranking Change</title>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<center>
-		<h2 id="title">TENRANCH</h2>
+		<h2 id="title">TENRACHQ</h2>
 		<h3 id="subtitle">Ranking Change View Screen</h3>	
 		<%
 		AccessCounter3 ac = new AccessCounter3();
 		%>
-		[ Access counter： <b><%=ac.GetAccessCount2("TENHTOHQ")%></b> ]	
+		[ Access counter： <b><%=ac.GetAccessCount2("TENRACHQ")%></b> ]	
 		<br /><br />	
 	</center>
 	<script src='TENHTOHQ_HeadToHeadQuery_JS_v2_fix2.js' type='text/javascript' language='javascript' charset='utf-8'>	
@@ -25,7 +25,7 @@
 <body>
 <%-- name="tennis_query" is duplicate name with "TENHTOHQ" screen, but the reason is because we are using "TENHTOHQ_HeadToHeadQuery_Sub2" as common component --%>
 <%-- (It uses the form name "tennis_query" to return the query result, so we need to use the same value to recieve that value.) --%>
-<form method="POST" action="TENRANCH_RankingChangeResult.jsp" name="tennis_query">
+<form method="POST" action="TENRACHR_RankingChangeResult.jsp" name="tennis_query">
 <table border="1">
 	<tr>
 		<th align="left">Player Name #1</th>
