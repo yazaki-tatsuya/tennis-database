@@ -7,6 +7,17 @@ import java.util.Calendar;
 import utility.DbConnectUtil3;
 
 public class TennisUtils {
+	
+	//2020-07-24:画面タイトルを定数化して宣言
+	public final String TENGSWIN = "ATP Mens Singles Grand Slam Win Times Ranking";
+	public final String TENHTOHQ = "ATP Mens Tennis Head To Head Query";
+	public final String TENHTOHR = "ATP Mens Tennis Head To Head Result";
+	public final String TENLDNPG = "ATP Mens Tennis Database";
+	public final String TENRACHQ = "ATP Mens Tennis Ranking Change Graph Query";
+	public final String TENRACHR = "ATP Mens Tennis Ranking Change Graph Result";
+	public final String TENSURCN = "ATP Mens Tennis Tournament Numbers per Surface";
+	public final String TENSVACR = "ATP Mens Tennis Service Ace Ranking";
+	
 	public ArrayList<String> getPlayerList(){
 		//String select1 = "SELECT FIRST_NAME || ' ' || LAST_NAME AS PNAME FROM PLAYER_OVERVIEWS ORDER BY PNAME";
 		String select1 = "SELECT FIRST_NAME || ' ' || LAST_NAME AS PNAME,PLAYER_SLUG FROM PLAYER_OVERVIEWS ORDER BY PLAYER_SLUG	";
