@@ -1,0 +1,38 @@
+ @CHARSET "UTF-8";
+ /*ヘッダー画像用*/
+   .header_img {
+   	position: relative;
+   	/*枠よりも外側はトリムする*/
+    overflow: hidden;
+   	width: 100%;
+   }
+ /*隠し<h1>タグ用*/
+  .hide {
+  	font-size: 8px;
+  	/*文字色を白色にする*/
+  	color: #FFFFFF;
+  	/*上下の余白を狭くする*/
+    margin-top: 0;
+  	margin-bottom: 0;
+  }
+ /*タイトル・サブタイトル用*/
+  .title_narrow {
+    /*上下の余白を狭くする*/
+    margin-top: 0;
+  	margin-bottom: 0;
+  }
+  
+  .font_1 {
+	font-family: "ＭＳ Ｐゴシック","Roboto", arial,sans-serif;	
+  }
+ 
+  .indent_1 {
+	padding-left:1.5em;
+  }
+  .indent_text {
+	text-align:left
+  }
+
+  .indent_form {
+  	margin-left:10px;
+  }

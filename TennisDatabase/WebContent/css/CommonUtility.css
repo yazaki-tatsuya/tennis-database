@@ -3,21 +3,21 @@
 /* width = XXXpx : Android(Arrows F-01K)のピクセル数 */
 @media screen and (min-width:0px) {
 	body {
-		color: #5bc0de;
+		color: #5bc0de; /*青*/
 		width: 98%;
  	}
 }
 /* width = 375px : iPhoneの画面ピクセル数 */
 @media screen and (min-width:374px) {
 	body {
-		color: #d9534f;
+		color: #d9534f; /*赤*/
 		width: 98%;
  	}
 }
 /* width = 1270px?? : 富士通のLIFEBOOK(型名FMVWB1U277)のピクセル数 */
 @media screen and (min-width:1275px) {
 	body {
-		color: #a020f0;
+		color: #a020f0; /*紫*/
 		width: 98%;
  	}
 }
