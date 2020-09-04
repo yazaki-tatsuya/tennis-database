@@ -1,26 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="utility.AccessCounter3" %>
+<%@ page import="tennisdb.TennisUtils" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html class="font_1">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
-<title>Insert title here</title>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
+<link rel="stylesheet" type="text/css" href="css/TennisDatabase.css">
+<%TennisUtils tu = new TennisUtils();%>
+<title><%=tu.TENLDNPG%></title>
+	<img src="http://rainbow-engine.com/wp-content/uploads/Common/20200725_HeaderIcon.jpg" alt="" class="header_img"/>
 	<center>
-		<h2 id="title">TENLDNPG</h2>
-		<h3 id="subtitle">Tennis Database Landing Page</h3>
-		<h4 id="subtitle">&#x1f3be;&#x1f3be;Welcome to the tennis database page.&#x1f3be;&#x1f3be;</h4>
+		<h1 class="hide"><%=tu.TENLDNPG%></h1>
+		<h2 id="title" class="title_narrow">TENLDNPG</h2>
+		<h3 id="subtitle" class="title_narrow"><%=tu.TENLDNPG%></h3>
+		<h4 id="subtitle" class="title_narrow">&#x1f3be;&#x1f3be;Welcome to the tennis database page.&#x1f3be;&#x1f3be;</h4>
 		<%
 		AccessCounter3 ac3 = new AccessCounter3();
 		%>
 		[ Access Counter：<b><%=ac3.GetAccessCount2("TENLDNPG")%></b> ]
 		<br /><br />
 	</center>
-	<p>
+	<p  class="title_narrow">
 	&#x1f3be;About Our Site (English)&#x1f3be;<br />
 	This site provides information of Tennis ATP Tour men's singles information from various perspectives.<br />
 	For examples, like "Head to Head results" and "Grand Slam Winned Times Ranking" and so on.<br />
@@ -28,8 +30,8 @@
 	&#x1f3be;About Our Site (Japanese)&#x1f3be;<br />
 	このサイトではテニスのATPツアー男子シングルスに関する様々なデータを提供します。<br />
 	例えば「指定した２選手の対戦成績」や「グランドスラムの優勝回数ランキング」など様々な観点の情報があります。<br/>
-	下記の中から好きな画面を開いて、情報を検索してみてください！<br />
-	</p>
+	下記の中から好きな画面を開いて、情報を検索してみてください！
+	</p><br />
 </head>
 <body>
 <form method="POST" name="tennis_query">
@@ -76,6 +78,13 @@
 		<td>Service Ace<br />(サービスエース)</td>
 		<td>In this screen, we display the ranking of service aces for the term(tournament year) given by the user.</td>
 		<td>この画面では指定した年度のサービスエース数のランキングを表示します</td>
+	</tr>
+	<tr>
+		<td><a href="TENTOREQ_TournamentResultQuery.jsp">TENTOREQ</a></td>
+		<td>Tournament Result Query Screen</td>
+		<td>Tournament Result<br />(トーナメント結果)</td>
+		<td>In this screen, provide a query screen to search the result of the ATP tournament up to Best 16.</td>
+		<td>この画面では指定したトーナメントのベスト１６までの結果を検索する事ができます。</td>
 	</tr>
 </table>
 </form>

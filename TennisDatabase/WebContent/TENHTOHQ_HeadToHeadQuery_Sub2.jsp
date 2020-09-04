@@ -4,12 +4,12 @@
 <%@ page import="utility.DbConnectUtil3" %>
 <%@ page import="utility.AccessCounter3" %>
 <!DOCTYPE html>
-<html>
+<html class="font_1">
 <head>
 <meta http-equiv="Content-Type" charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
-<title>Head To Head</title>
+<title>Query Sub Screen</title>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
 	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>

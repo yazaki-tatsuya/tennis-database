@@ -3,20 +3,22 @@
 <%@ page import="database.DBMS" %>
 <%@ page import="utility.DbConnectUtil3" %>
 <%@ page import="utility.AccessCounter3" %>
+<%@ page import="tennisdb.TennisUtils" %>
 <!DOCTYPE html>
-<html>
+<html class="font_1">
 <head>
 <meta http-equiv="Content-Type" charset="UTF-8" />
 <meta name="format-detection" content="telephone=no" /> <%-- <<-- To avoid match scores to be shown as a TEL number link --%>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
-<title>Head To Head</title>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
+<link rel="stylesheet" type="text/css" href="css/TennisDatabase.css">
+<%TennisUtils tu = new TennisUtils();%>
+<title><%=tu.TENHTOHR%></title>
+	<img src="http://rainbow-engine.com/wp-content/uploads/Common/20200725_HeaderIcon.jpg" alt="" class="header_img"/>
 	<center>
-		<h2 id="title">TENHTOHR</h2>
-		<h3 id="subtitle">Head To Head Query Result Screen</h3>
+		<h1 class="hide"><%=tu.TENHTOHR%></h1>
+		<h2 id="title" class="title_narrow">TENHTOHR</h2>
+		<h3 id="subtitle" class="title_narrow"><%=tu.TENHTOHR%></h3>
 		
 		<%
 		AccessCounter3 ac = new AccessCounter3();

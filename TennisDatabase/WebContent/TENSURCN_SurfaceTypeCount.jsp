@@ -3,18 +3,20 @@
 <%@ page import="database.DBMS" %>
 <%@ page import="utility.AccessCounter3" %>
 <%@ page import="utility.DbConnectUtil3" %>
-<html>
+<%@ page import="tennisdb.TennisUtils" %>
+<html class="font_1">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/CommonUtility.css">
-<title>Surface Count</title>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
-	<img src="http://rainbow-engine.com/wp-content/uploads/2017/09/cropped-c8a03ed7.jpg" alt="" width="31%"/>
+<link rel="stylesheet" type="text/css" href="css/TennisDatabase.css">
+<%TennisUtils tu = new TennisUtils();%>
+<title><%=tu.TENSURCN%></title>
+	<img src="http://rainbow-engine.com/wp-content/uploads/Common/20200725_HeaderIcon.jpg" alt="" class="header_img"/>
 	<center>
-		<h2 id="title">TENSURCN</h2>
-		<h4 id="subtitle">Court Surface Type Count Screen</h4>
+		<h1 class="hide"><%=tu.TENSURCN%></h1>
+		<h2 id="title" class="title_narrow">TENSURCN</h2>
+		<h3 id="subtitle" class="title_narrow"><%=tu.TENSURCN%></h3>
 		
 		<%
 		AccessCounter3 ac = new AccessCounter3();
